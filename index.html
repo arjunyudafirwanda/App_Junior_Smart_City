@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101a35" />
+    <meta name="description" content="Junior Smart City — game edukasi untuk remaja SMP. Rancang kota pintar melalui tantangan energi, transportasi, sampah, lingkungan, dan teknologi digital." />
+    <meta name="author" content="Arjun Yuda Firwanda" />
+    <title>Junior Smart City | Build a Better Future</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header" id="siteHeader">
+      <div class="header-inner">
+        <a class="brand" href="#home" aria-label="Junior Smart City beranda">
+          <img src="assets/images/logo.svg" alt="" class="brand-logo" />
+          <span class="brand-copy"><strong>JUNIOR SMART CITY</strong><small>BUILD A BETTER FUTURE</small></span>
+        </a>
+
+        <div class="header-actions" id="headerActions" hidden>
+          <div class="player-chip">
+            <span class="player-avatar"><i class="fa-solid fa-user-astronaut" aria-hidden="true"></i></span>
+            <span class="player-copy"><small>URBAN PLANNER</small><strong id="headerPlayerName">Explorer</strong></span>
+          </div>
+          <div class="header-stat"><span class="stat-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span><span><small>JENJANG</small><strong id="headerGrade">SMP</strong></span></div>
+          <div class="header-stat"><span class="stat-icon"><i class="fa-solid fa-star" aria-hidden="true"></i></span><span><small>SKOR</small><strong id="headerScore">0</strong></span></div>
+          <button class="icon-button theme-button" id="themeToggle" type="button" aria-label="Ganti tema" title="Ganti tema"><i class="fa-solid fa-moon"></i></button>
+          <button class="header-switch" id="switchPlayerButton" type="button"><i class="fa-solid fa-users" aria-hidden="true"></i><span>Ganti Pemain</span></button>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="welcome-screen" id="welcomeScreen">
+        <div class="welcome-glow glow-one"></div><div class="welcome-glow glow-two"></div>
+        <div class="welcome-layout page-shell">
+          <div class="welcome-copy">
+            <div class="eyebrow-pill"><span class="live-dot"></span> A SMART CITY SIMULATION GAME</div>
+            <h1>Design the City.<br /><span>Shape the Future.</span></h1>
+            <p class="welcome-lead">Jadilah perancang kota masa depan! Selesaikan tantangan energi bersih, transportasi cerdas, pengelolaan sampah, lingkungan, dan teknologi digital untuk membangun kota yang lebih nyaman dan berkelanjutan.</p>
+            <div class="welcome-highlights">
+              <div><span class="highlight-icon blue"><i class="fa-solid fa-city"></i></span><span><strong>20 Misi Kota</strong><small>Lima zona tantangan</small></span></div>
+              <div><span class="highlight-icon green"><i class="fa-solid fa-leaf"></i></span><span><strong>Smart & Green</strong><small>Solusi dunia nyata</small></span></div>
+              <div><span class="highlight-icon purple"><i class="fa-solid fa-brain"></i></span><span><strong>Critical Thinking</strong><small>Belajar lewat keputusan</small></span></div>
+            </div>
+          </div>
+
+          <div class="welcome-card">
+            <div class="welcome-card-top"><span class="card-mark"><i class="fa-solid fa-city"></i></span><span>YOUR CITY STARTS HERE</span><span class="card-online"><i class="fa-solid fa-circle"></i> READY</span></div>
+            <div class="city-illustration" aria-hidden="true">
+              <div class="sky-orbit orbit-a"></div><div class="sky-orbit orbit-b"></div>
+              <div class="sun-core"></div>
+              <div class="city-skyline">
+                <div class="building building-a"><i></i><i></i><i></i><i></i></div>
+                <div class="building building-b"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="building building-c"><i></i><i></i><i></i><i></i></div>
+                <div class="building building-d"><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="windmill"><span></span><i></i></div>
+                <div class="solar-panel"></div>
+                <div class="city-road"><span class="road-line"></span><span class="mini-car"></span></div>
+                <div class="tree tree-one"><i></i></div><div class="tree tree-two"><i></i></div>
+              </div>
+              <div class="floating-tag tag-energy"><i class="fa-solid fa-solar-panel"></i> CLEAN ENERGY</div>
+              <div class="floating-tag tag-data"><i class="fa-solid fa-wifi"></i> SMART DATA</div>
+            </div>
+            <form id="startForm" class="start-form" novalidate>
+              <div class="form-heading"><strong>Siap membangun kota?</strong><small>Masukkan identitas urban planner.</small></div>
+              <label for="playerNameInput">Nama pemain</label>
+              <div class="input-wrap"><i class="fa-regular fa-user"></i><input id="playerNameInput" name="playerName" type="text" minlength="2" maxlength="24" autocomplete="name" placeholder="Contoh: Arjun" required /></div>
+              <label for="playerAgeInput">Usia</label>
+              <div class="input-wrap age-input-wrap"><i class="fa-solid fa-cake-candles"></i><input id="playerAgeInput" name="playerAge" type="number" min="13" max="16" step="1" inputmode="numeric" placeholder="13–16 tahun" required /><span>tahun</span></div>
+              <p class="form-hint">Untuk peserta didik SMP usia 13–16 tahun. Progres akan tersimpan di perangkat ini.</p>
+              <button class="btn btn-primary btn-start" type="submit"><span id="startButtonText">Mulai Petualangan</span><i class="fa-solid fa-arrow-right"></i></button>
+              <p class="form-error" id="startError" role="alert" hidden></p>
+              <p class="privacy-note"><i class="fa-solid fa-shield-heart"></i> Tidak memerlukan akun atau email.</p>
+            </form>
+          </div>
+        </div>
+        <div class="welcome-bottom page-shell"><span><i class="fa-solid fa-graduation-cap"></i> LEARN THROUGH SIMULATION</span><span>ENERGY <b>·</b> MOBILITY <b>·</b> ENVIRONMENT <b>·</b> TECHNOLOGY</span></div>
+      </section>
+
+      <section class="app-shell page-shell" id="appShell" hidden>
+        <section class="dashboard-intro">
+          <div class="intro-copy"><span class="section-kicker">SMART CITY CONTROL CENTER</span><h2>Selamat datang, <span id="welcomePlayerName">Planner</span>!</h2><p>Setiap keputusanmu membawa kota selangkah lebih dekat menuju masa depan yang lebih baik.</p></div>
+          <div class="intro-progress"><div class="progress-ring" id="progressRing" style="--progress:0%"><div><strong id="overallProgress">0%</strong><small>PROGRES KOTA</small></div></div><div class="progress-summary-copy"><strong id="completedMissionLabel">0 / 20 Misi</strong><small>Misi terselesaikan</small><strong class="dashboard-score" id="dashboardScore">0 PTS</strong></div></div>
+        </section>
+
+        <section class="city-dashboard panel">
+          <div class="panel-heading"><div><span class="panel-overline">CITY PERFORMANCE</span><h3>Kondisi Kota</h3></div><span class="city-status" id="cityStatus"><i class="fa-solid fa-signal"></i> NEEDS IMPROVEMENT</span></div>
+          <div class="city-visual-wrap">
+            <div class="city-visual" aria-label="Ilustrasi kota pintar">
+              <div class="city-sun"></div><div class="cloud cloud-a"></div><div class="cloud cloud-b"></div>
+              <div class="visual-building vb-one"><span></span><span></span><span></span></div>
+              <div class="visual-building vb-two"><span></span><span></span><span></span><span></span></div>
+              <div class="visual-building vb-three"><span></span><span></span><span></span></div>
+              <div class="visual-building vb-four"><span></span><span></span><span></span><span></span></div>
+              <div class="visual-solar"></div><div class="visual-tree vt-one"></div><div class="visual-tree vt-two"></div>
+              <div class="visual-road"><span></span><i class="fa-solid fa-bus"></i></div>
+              <div class="visual-wind"><i></i><b></b></div>
+              <div class="city-caption"><i class="fa-solid fa-location-dot"></i> YOUR SMART CITY</div>
+            </div>
+            <div class="city-metrics" id="cityMetrics">
+              <div class="metric-card" data-metric="energy"><div class="metric-top"><span class="metric-icon energy-icon"><i class="fa-solid fa-solar-panel"></i></span><span class="metric-value" id="metricEnergyValue">25%</span></div><strong>Energi Bersih</strong><div class="metric-track"><span id="metricEnergyBar"></span></div><small>Energi terbarukan</small></div>
+              <div class="metric-card" data-metric="mobility"><div class="metric-top"><span class="metric-icon mobility-icon"><i class="fa-solid fa-bus"></i></span><span class="metric-value" id="metricMobilityValue">25%</span></div><strong>Mobilitas Cerdas</strong><div class="metric-track"><span id="metricMobilityBar"></span></div><small>Transportasi berkelanjutan</small></div>
+              <div class="metric-card" data-metric="waste"><div class="metric-top"><span class="metric-icon waste-icon"><i class="fa-solid fa-recycle"></i></span><span class="metric-value" id="metricWasteValue">25%</span></div><strong>Sampah Terkelola</strong><div class="metric-track"><span id="metricWasteBar"></span></div><small>Daur ulang dan pengurangan</small></div>
+              <div class="metric-card" data-metric="green"><div class="metric-top"><span class="metric-icon green-icon"><i class="fa-solid fa-tree"></i></span><span class="metric-value" id="metricGreenValue">25%</span></div><strong>Lingkungan Hijau</strong><div class="metric-track"><span id="metricGreenBar"></span></div><small>Ruang hijau dan kualitas hidup</small></div>
+              <div class="metric-card" data-metric="digital"><div class="metric-top"><span class="metric-icon digital-icon"><i class="fa-solid fa-tower-broadcast"></i></span><span class="metric-value" id="metricDigitalValue">25%</span></div><strong>Layanan Digital</strong><div class="metric-track"><span id="metricDigitalBar"></span></div><small>Sensor, data, dan respons</small></div>
+            </div>
+          </div>
+          <p class="city-dashboard-note"><i class="fa-regular fa-lightbulb"></i> Selesaikan misi di setiap zona untuk meningkatkan indikator kota.</p>
+        </section>
+
+        <section class="mission-map-section panel" id="missionMapSection">
+          <div class="panel-heading map-heading"><div><span class="panel-overline">YOUR CITY BLUEPRINT</span><h3>Peta Misi Kota</h3><p>Pilih misi yang sudah terbuka. Setiap zona memiliki empat tantangan.</p></div><div class="map-legend"><span><i class="legend-dot completed-dot"></i> Selesai</span><span><i class="legend-dot current-dot"></i> Terbuka</span><span><i class="legend-dot locked-dot"></i> Terkunci</span></div></div>
+          <div class="zone-grid" id="zoneGrid"></div>
+        </section>
+
+        <section class="mission-workspace" id="missionWorkspace" hidden>
+          <div class="workspace-top"><button class="text-back-button" id="backToMapButton" type="button"><i class="fa-solid fa-arrow-left"></i> Kembali ke Peta Misi</button><span class="mission-step-label" id="missionStepLabel">MISSION 01 / 20</span></div>
+          <div class="mission-layout">
+            <section class="mission-brief panel">
+              <div class="mission-visual" id="missionVisual"><span class="mission-emoji" id="missionEmoji">☀️</span><span class="mission-zone-chip" id="missionZoneChip">ENERGI CERDAS</span><span class="mission-visual-number" id="missionVisualNumber">01</span></div>
+              <div class="mission-brief-content"><div class="mission-tags"><span class="difficulty-tag" id="missionDifficulty">LEVEL PEMULA</span><span class="mission-xp"><i class="fa-solid fa-star"></i> UP TO 140 PTS</span></div><h2 id="missionTitle">Terangi Jalan dengan Cerdas</h2><p class="mission-story" id="missionStory"></p><div class="challenge-box"><span><i class="fa-solid fa-bullseye"></i> CITY CHALLENGE</span><strong id="missionQuestion"></strong></div><div class="mission-hint"><i class="fa-solid fa-lightbulb"></i><p id="missionHint"></p></div></div>
+            </section>
+            <section class="solution-panel panel"><div class="panel-heading"><div><span class="panel-overline">MAKE YOUR DECISION</span><h3>Pilih Solusi Terbaik</h3></div><span class="choice-counter" id="choiceCounter">0 / 1</span></div><p class="solution-instruction">Baca situasi kota, analisis setiap pilihan, lalu tentukan solusi paling tepat.</p><div class="solution-options" id="solutionOptions"></div><div class="solution-footer"><div class="attempt-indicator" id="attemptIndicator"><span class="attempt-dots"><i></i><i></i><i></i></span><small>Percobaan <strong id="attemptCount">0</strong></small></div><button class="btn btn-primary apply-button" id="applySolutionButton" type="button" disabled><i class="fa-solid fa-check"></i> Terapkan Solusi</button></div><div class="answer-feedback" id="answerFeedback" role="status" aria-live="polite" hidden></div></section>
+          </div>
+          <section class="workspace-progress panel"><div><span class="panel-overline">MISSION PROGRESS</span><strong id="missionProgressText">0 dari 20 misi selesai</strong></div><div class="workspace-progress-track"><span id="missionProgressBar"></span></div><span id="missionProgressPercent">0%</span></section>
+        </section>
+
+        <section class="learning-footer"><div class="learning-footer-icon"><i class="fa-solid fa-graduation-cap"></i></div><div><strong>Think Smart. Build Sustainable.</strong><p>Belajar memahami masalah kota, memilih teknologi yang tepat, dan membuat keputusan berdasarkan dampak.</p></div><span class="learning-footer-tag">SMP · 13–16 YEARS</span></section>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="footer-inner page-shell"><a class="footer-brand" href="#home"><img src="assets/images/logo.svg" alt=""/><span>JUNIOR SMART CITY</span></a><p>Designed & Developed by <strong>Arjun Yuda Firwanda</strong> · © <span id="currentYear"></span> All rights reserved.</p><span class="footer-tagline">THINK · DESIGN · IMPROVE</span></div></footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"><span class="toast-icon"><i class="fa-solid fa-circle-info"></i></span><span id="toastMessage">Informasi</span></div>
+
+    <div class="modal-backdrop" id="completionModal" hidden><section class="result-modal" role="dialog" aria-modal="true" aria-labelledby="completionTitle"><div class="result-decoration">✦　✧　✦</div><div class="result-icon"><i class="fa-solid fa-city"></i></div><span class="result-kicker">MISSION ACCOMPLISHED</span><h2 id="completionTitle">Kota semakin cerdas!</h2><p class="result-description" id="completionDescription">Keputusan hebat! Kamu berhasil menyelesaikan misi.</p><div class="result-stars" id="resultStars">★★★</div><div class="result-stats"><div><strong id="earnedPoints">+140</strong><small>POIN DIDAPAT</small></div><div><strong id="completionAttempts">1</strong><small>PERCOBAAN</small></div><div><strong id="completionTotal">1 / 20</strong><small>MISI SELESAI</small></div></div><div class="result-actions"><button class="btn btn-primary" id="nextMissionButton" type="button">Misi Berikutnya <i class="fa-solid fa-arrow-right"></i></button><button class="btn btn-soft" id="resultMapButton" type="button">Kembali ke Peta</button></div></section></div>
+
+    <div class="modal-backdrop penalty-backdrop" id="penaltyModal" hidden><section class="penalty-modal" role="alertdialog" aria-modal="true" aria-labelledby="penaltyTitle"><div class="penalty-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><span class="penalty-kicker">LEARNING CHECKPOINT</span><h2 id="penaltyTitle">Saatnya evaluasi strategi!</h2><p id="penaltyDescription">Kamu sudah melakukan tiga percobaan yang belum tepat.</p><div class="penalty-stats"><div><small>SKOR SEBELUMNYA</small><strong id="penaltyBefore">140</strong></div><div><small>PENGURANGAN</small><strong class="penalty-deduction" id="penaltyDeduction">−20</strong></div><div><small>SKOR SEKARANG</small><strong id="penaltyAfter">120</strong></div></div><p class="penalty-tip"><i class="fa-solid fa-lightbulb"></i> Baca kembali petunjuk dan analisis dampak setiap solusi sebelum mencoba lagi.</p><button class="btn btn-primary penalty-close" id="closePenaltyButton" type="button">Mengerti, Coba Lagi</button></section></div>
+
+    <script src="assets/js/missions.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
