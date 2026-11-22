@@ -1,4 +1,3 @@
-/* Junior Smart City — bank 20 misi edukasi SMP */
 (() => {
   const missions = [
     {
